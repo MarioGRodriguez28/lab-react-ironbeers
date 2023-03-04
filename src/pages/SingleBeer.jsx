@@ -5,6 +5,10 @@ function SingleBeer() {
   return (
     <div>
     <Link to="/">Home</Link>
+<div>
+
+</div>
+
     
     
     </div>
