@@ -29,7 +29,7 @@ function ListBeer() {
         //  {/* console.log("Estoy extrayendo esto de eachBeer", eachBeer) */}
 
         return (
-          <Link to="/beers/{eachBeer._id}"  key={eachBeer._id} value={eachBeer.name} >
+          <Link to={`/beers/${eachBeer._id}`}  key={eachBeer._id} value={eachBeer.name} >
             <div>
               <img src={eachBeer.image_url} alt="List Beers" width={75} />
               <h1>{eachBeer.name}</h1>

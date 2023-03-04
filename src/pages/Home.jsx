@@ -1,12 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import beer from "../assets/beers.png";
+import newBeer from "../assets/new-beer.png";
+import randomBeer from "../assets/random-beer.png";
 
 function Home() {
   return (
     <div>
       <div>
-        <img src={'../assets/beers.png'} alt="Beers" />
-        <Link to="/beers">
+        <img src={beer} alt="Beers" />
+        <NavLink to="/beers">
           <h1>List Beers</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -16,11 +19,11 @@ function Home() {
             massa ut, vestibulum sem. Integer eget sem laoreet, aliquet velit
             in, maximus orci.
           </p>
-        </Link>
+        </NavLink>
       </div>
       <div>
-        <Link to="/random-beer">
-          <img src="../assets/random-beer.png" alt="Random Beers" />
+        <NavLink to="/random-beer">
+          <img src={randomBeer} alt="Random Beers" />
           <h1>Random Beers</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -30,11 +33,11 @@ function Home() {
             massa ut, vestibulum sem. Integer eget sem laoreet, aliquet velit
             in, maximus orci.
           </p>
-        </Link>
+        </NavLink>
       </div>
       <div>
-        <Link to="/new-beer">
-          <img src="../assets/new-beer.png" alt="New Beers" />
+        <NavLink to="/new-beer">
+          <img src={newBeer} alt="New Beers" />
           <h1>New Beers</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -44,7 +47,7 @@ function Home() {
             massa ut, vestibulum sem. Integer eget sem laoreet, aliquet velit
             in, maximus orci.
           </p>
-        </Link>
+        </NavLink>
       </div>
     </div>
   )
