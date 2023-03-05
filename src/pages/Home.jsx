@@ -22,7 +22,7 @@ function Home() {
         </NavLink>
       </div>
       <div>
-        <NavLink to="/random-beer">
+        <NavLink to="/random">
           <img src={randomBeer} alt="Random Beers" />
           <h1>Random Beers</h1>
           <p>
