@@ -6,6 +6,7 @@ import ListBeer from './pages/ListBeer'
 import SingleBeer from './pages/SingleBeer'
 import Error from './pages/Error'
 import NotFound from './pages/NotFound'
+import NewBeer from './pages/NewBeer'
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/random" element={<Random />} />
         <Route path="/beers" element={<ListBeer />} />
         <Route path="/beers/:id" element={<SingleBeer />} />
+        <Route path="/new-beer" element={<NewBeer/> } />
+
 
         {/* Rutas de error */}
 
