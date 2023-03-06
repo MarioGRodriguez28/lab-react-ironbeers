@@ -1,5 +1,7 @@
 import axios from 'axios'
+import Button from 'react-bootstrap/Button'
 import React, { useState } from 'react'
+import Form from 'react-bootstrap/Form'
 import { Link, useNavigate } from 'react-router-dom'
 
 function NewBeer() {
@@ -61,37 +63,49 @@ function NewBeer() {
     }
 
     return (
-        <div>
-            <Link to="/">Home</Link>
-            <form>
+        <div className="App">
+            <Form className="mb-6" >
 
-                <label htmlFor="name">Name</label>
-                <input type="text" name="name" onChange={handleNameChange} value={name} />
+                <Form.Group controlId="">
+                    <Form.Label htmlFor="name">Name</Form.Label>
+                    <Form.Control type="text" name="name" onChange={handleNameChange} value={name} />
+                </Form.Group>
                 <br />
-                <label htmlFor="tagline">Tagline</label>
-                <input type="text" name="tagline" onChange={handleTaglineChange} value={tagline} />
+                <Form.Group>
+                    <Form.Label htmlFor="tagline">Tagline</Form.Label>
+                    <Form.Control type="text" name="tagline" onChange={handleTaglineChange} value={tagline} />
+                </Form.Group>
                 <br />
-                <label htmlFor="description">Description</label>
-                <input type="text" name="description" onChange={handleDescriptionChange} value={description} />
+                <Form.Group>
+                    <Form.Label htmlFor="description">Description</Form.Label>
+                    <Form.Control as="textarea" rows={3} type="text" name="description" onChange={handleDescriptionChange} value={description} />
+                </Form.Group>
                 <br />
-                <label htmlFor="first_brewed">First Brewed</label>
-                <input type="text" name="first_brewed" onChange={handleFirstBrewedChange} value={first_brewed} />
+                <Form.Group>
+                    <Form.Label htmlFor="first_brewed">First Brewed</Form.Label>
+                    <Form.Control type="text" name="first_brewed" onChange={handleFirstBrewedChange} value={first_brewed} />
+                </Form.Group>
                 <br />
-                <label htmlFor="brewers_tips">Tips</label>
-                <input type="text" name="brewers_tips" onChange={handleBrewersTipshange} value={brewers_tips} />
+                <Form.Group>
+                    <Form.Label htmlFor="brewers_tips">Tips</Form.Label>
+                    <Form.Control type="text" name="brewers_tips" onChange={handleBrewersTipshange} value={brewers_tips} />
+                </Form.Group>
                 <br />
-                <label htmlFor="attenuation_level">Attenuation</label>
-                <input type="number" name="attenuation_level" onChange={handleAttenuationLevelChange} value={attenuation_level} />
+                <Form.Group>
+                    <Form.Label htmlFor="attenuation_level">Attenuation</Form.Label>
+                    <Form.Control type="number" name="attenuation_level" onChange={handleAttenuationLevelChange} value={attenuation_level} />
+                </Form.Group>
                 <br />
-                <label htmlFor="contributed_by">Created by</label>
-                <input type="text" name="contributed_by" onChange={handleContributedByChange} value={contributed_by} />
-                <br />
+                <Form.Group>
+                    <Form.Label htmlFor="contributed_by">Created by</Form.Label>
+                    <Form.Control type="text" name="contributed_by" onChange={handleContributedByChange} value={contributed_by} />
+                    <br />
+                </Form.Group>
+
+                <Button onClick={handleSubmitForm}>Agregar</Button>
 
 
-                <button  onClick={handleSubmitForm}>Agregar</button>
-
-            </form>
-
+            </Form>
         </div>
     )
 }

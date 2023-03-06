@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Home from './pages/Home'
 import Random from './pages/RandomBeer'
@@ -7,10 +8,12 @@ import SingleBeer from './pages/SingleBeer'
 import Error from './pages/Error'
 import NotFound from './pages/NotFound'
 import NewBeer from './pages/NewBeer'
+import NavBar from './components/NavBar'
 
 function App() {
   return (
     <div className="App">
+    <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/random" element={<Random />} />
